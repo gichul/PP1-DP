@@ -2,6 +2,7 @@ package edu.handong.csee.pp1.dp;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.Test;
 
 import net.lifove.clami.CLAMI;
@@ -11,7 +12,7 @@ public class CLAMITest {
 	@Test
 	public void testCLAMIHelp() {
 		// Put a GitHub repository path you cloned in your laptop.
-		String[] args = {"-h"};
+		String[] args = {"/Users/gichulkim/git"};
 		
 		CLAMI.main(args);
 	}
@@ -74,8 +75,12 @@ public class CLAMITest {
 		String bestCutoff = "50";
 		
 		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+		String[] args2 = {"-f","data/PolyMorphism.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+		String[] args3 = {"-f","data/InheritanceExample.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
 
 		CLAMI.main(args);
+		CLAMI.main(args2);
+		CLAMI.main(args3);
 	}
 	
 	@Test
@@ -86,6 +91,9 @@ public class CLAMITest {
 		String bestCutoff = "50";
 		
 		String[] args = {"-f","data/Apache.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+		String[] args2 = {"-f","data/PolyMorphism.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+		String[] args3 = {"-f","data/InheritanceExample.arff","-l","isDefective","-p", "TRUE", "-m", "-c", bestCutoff};
+
 
 		CLAMI.main(args);
 	}
